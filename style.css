@@ -1,5 +1,5 @@
 body {
-    background-image: url("hands thick.jpg");
+    background-image: url("turing.png");
     background-size: cover;
     background-position: center;
     color: black;
@@ -26,7 +26,7 @@ body {
         opacity: 1;
     }
     50% {
-        opacity: .98;
+        opacity: .95;
     }
     100% {
         opacity: 1;
@@ -44,7 +44,7 @@ body {
 }
 
 .content {
-    background-color: black;
+    background-color: transparent;
     color: white;
     padding: 40px;
 }
@@ -58,14 +58,36 @@ p {
     margin-top: 30;
 }
 
-#play-button {
-    background-color: black;
+
+#play-container {
+    position: absolute; /* Position absolutely */
+    bottom: 33vh; /* Move to bottom quarter (adjust as needed) */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for element's width */
+    background-color: transparent;
     color: white;
     border: none;
-    padding: 0px;
+    padding: 15px 30px;
     font-size: 1.2em;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s, color 0.3s ease; /* Added color transition */
+    display: inline-block;
+}
+
+#play-container:hover {
+    color: rgb(255, 246, 198); /* Change text color to blue on hover */
+}
+
+#caret {
+
+    animation: blink 1s step-start 0s infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 #info-button {
@@ -84,6 +106,6 @@ p {
     z-index: 2;
 }
 
-#play-button:hover, #info-button:hover {
+#info-button:hover {
     transform: scale(1.1);
 }
