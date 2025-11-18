@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turing - Game Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="black-background">
+    <div class="stats-container">
+        <h1>Game Stats</h1>
+        <div class="stats-grid-container">
+            <div class="leaderboard">
+                <h2>Leaderboard</h2>
+                <ul>
+                    <li>user1 - 100 (2.5s)</li>
+                    <li>user2 - 90 (3.1s)</li>
+                    <li>user3 - 90 (3.5s)</li>
+                    <li>user4 - 80 (4.0s)</li>
+                    <li>user5 - 75 (4.2s)</li>
+                </ul>
+            </div>
+            <div class="lobby-score">
+                <h2>Lobby Score</h2>
+                <p class="score-percentage">85%</p>
+            </div>
+            <div class="guess-review">
+                <h2>Your Guesses</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Original Prompt</th>
+                            <th>Your Guess</th>
+                            <th>Actual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Prompt 1...</td>
+                            <td>Human</td>
+                            <td class="correct">Human</td>
+                        </tr>
+                        <tr>
+                            <td>Prompt 2...</td>
+                            <td>AI</td>
+                            <td class="incorrect">Human</td>
+                        </tr>
+                        <tr>
+                            <td>Prompt 3...</td>
+                            <td>AI</td>
+                            <td class="correct">AI</td>
+                        </tr>
+                        <tr>
+                            <td>Prompt 4...</td>
+                            <td>Human</td>
+                            <td class="incorrect">AI</td>
+                        </tr>
+                        <tr>
+                            <td>Prompt 5...</td>
+                            <td>Human</td>
+                            <td class="correct">Human</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="#" class="forum-link">Want to submit your own prompts? Check out our forum for more info.</a>
+            <p>Had fun? Come back tomorrow for new prompts.</p>
+        </div>
+    </div>
+    <script src="stats.js"></script>
+</body>
+</html>
