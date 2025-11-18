@@ -1,13 +1,19 @@
 body {
-    background-image: url("turing.png");
-    background-size: cover;
-    background-position: center;
-    color: black;
+    color: white;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     height: 100vh;
-    overflow: hidden; /* To prevent scrollbars from the overlay */
-    font-family: 'Courier New', Courier, monospace
+    overflow: hidden;
+}
+
+.turing-background {
+    background-image: url("turing.png");
+    background-size:auto;
+    background-position: center;
+}
+
+.black-background {
+    background-color: black;
 }
 
 .overlay {
@@ -58,28 +64,35 @@ p {
     margin-top: 30;
 }
 
-
 #play-container {
-    position: absolute; /* Position absolutely */
-    bottom: 33vh; /* Move to bottom quarter (adjust as needed) */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for element's width */
+    position: absolute;
+    bottom: 33vh;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: transparent;
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 1.2em;
     cursor: pointer;
-    transition: transform 0.2s, color 0.3s ease; /* Added color transition */
+    transition: transform 0.2s, color 0.3s ease;
     display: inline-block;
 }
 
 #play-container:hover {
-    color: rgb(255, 246, 198); /* Change text color to blue on hover */
+    color: rgb(255, 246, 198);
+}
+
+#username-input-container {
+    font-size: 1.2em;
+}
+
+#countdown-timer {
+    font-size: 6em; /* Large font size for the countdown */
+    color: white;
 }
 
 #caret {
-
     animation: blink 1s step-start 0s infinite;
     font-weight: bold;
 }
@@ -108,4 +121,13 @@ p {
 
 #info-button:hover {
     transform: scale(1.1);
+}
+
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 2;
 }
